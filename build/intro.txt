@@ -1,0 +1,34 @@
+██████╗░██╗░█████╗░██╗███╗░░██╗███████╗░█████╗░██████╗░███╗░░░███╗░█████╗░████████╗██╗░█████╗░░█████╗░
+██╔══██╗██║██╔══██╗██║████╗░██║██╔════╝██╔══██╗██╔══██╗████╗░████║██╔══██╗╚══██╔══╝██║██╔══██╗██╔══██╗
+██████╦╝██║██║░░██║██║██╔██╗██║█████╗░░██║░░██║██████╔╝██╔████╔██║███████║░░░██║░░░██║██║░░╚═╝███████║
+██╔══██╗██║██║░░██║██║██║╚████║██╔══╝░░██║░░██║██╔══██╗██║╚██╔╝██║██╔══██║░░░██║░░░██║██║░░██╗██╔══██║
+██████╦╝██║╚█████╔╝██║██║░╚███║██║░░░░░╚█████╔╝██║░░██║██║░╚═╝░██║██║░░██║░░░██║░░░██║╚█████╔╝██║░░██║
+                                                                          -Progetto di 𝓐𝓷𝓽𝓸𝓷𝓲𝓸 𝓐𝓵𝓵𝓸𝓬𝓬𝓪
+
+######################################################################################################
+Questo programma è stato pensato e sviluppato per individuare collisioni in tante read.
+
+Ogni riga del file in input rappresenta una riga del DNA. 
+All'inizio di ogni riga ci sarà una stringa con del tipo ID_BOOL
+
+ID = Identificativo della read
+BOOL = Può assumere due valori:
+ -0: Si riferisce al Reverse-And-Complement della read
+ -1: Si riferisce alla read
+ 
+Le operazioni vengono fatte su liste di dizionari allocate dinamicamente che consentono
+un accesso rapido ai dati simulando di fatto delle hash table.
+
+Le entry dell' hash table sono composte da (KEY,VALUE)
+ -KEY: Valore intero che indica la lista di entry per cui si verificano delle collisioni
+ -VALUE: Dizionario in cui le entry hanno la chiave che colide
+ 
+Ciò ci permette di avere un tempo di acesso costante ai dizionari e di ridurre al minimo
+i confronti per eventuali verifiche di presenza o meno di determinate entry all'interno dei
+dizionri.
+
+Tutto è parametrizzato e i valori si possono impostare nelle prime righe del main.
+Lo scopo di questa soluzione infatti è di rendere il codice riutilizzabile, alla portata
+di ogni macchina e capacità di calcolo e incoraggiare test futuri per ottere la combinazione
+di valori che possono dare la soluzione ottimale.
+######################################################################################################
