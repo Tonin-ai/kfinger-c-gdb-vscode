@@ -3,7 +3,7 @@
 typedef struct hash_msdict{
 
         min_sharing_dict** dicts_list;
-        int size;
+        unsigned int size;
 
 } hash_msdict;
 

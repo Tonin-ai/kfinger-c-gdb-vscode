@@ -1,9 +1,9 @@
 typedef struct fingerprint{
-        int id;
-        int isreverse;
-        int* list;
-        int size;
-        int used;
+        unsigned int id;
+        unsigned int isreverse;
+        unsigned int* list;
+        unsigned int size;
+        unsigned int used;
 
 } fingerprint;
 

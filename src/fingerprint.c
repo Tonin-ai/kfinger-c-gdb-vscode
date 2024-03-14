@@ -4,11 +4,11 @@
 #include <malloc.h>
 
 typedef struct fingerprint{
-	int id; //id della fingerprint
-	int isreverse; //bool per vedere se la read è Reverse_and_Complement
-	int* list; //lista di interi della fingerprint
-	int size; //numero di entry stimate
-	int used; //numero di entry effettivamente utilizzate
+	unsigned int id; //id della fingerprint
+	unsigned int isreverse; //bool per vedere se la read è Reverse_and_Complement
+	unsigned int* list; //lista di interi della fingerprint
+	unsigned int size; //numero di entry stimate
+	unsigned int used; //numero di entry effettivamente utilizzate
 
 } fingerprint;
 

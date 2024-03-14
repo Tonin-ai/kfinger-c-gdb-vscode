@@ -7,6 +7,6 @@ typedef struct hash_mdict{
 
 } hash_mdict;
 
-void initHashMDict(hash_mdict* mdict,int size);
+void initHashMDict(hash_mdict* mdict,unsigned int size);
 int add_in_hash_mdict(matches_dict** dict,int* reads,int first, int second);
 void viewHashMDict(hash_mdict* mdict);

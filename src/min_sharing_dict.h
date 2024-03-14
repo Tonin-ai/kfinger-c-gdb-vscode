@@ -3,8 +3,8 @@
 typedef struct min_sharing_dict{
 
         min_sharing_dict_entry** head;
-        int size;
-        int used;
+        unsigned int size;
+        unsigned int used;
 
 }min_sharing_dict;
 

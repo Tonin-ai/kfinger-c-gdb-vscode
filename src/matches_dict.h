@@ -4,8 +4,8 @@
 typedef struct matches_dict{
 
         matches_dict_entry** head; //primo elemento
-        int size;
-        int used;
+        unsigned int size;
+        unsigned int used;
 
 }matches_dict;
 

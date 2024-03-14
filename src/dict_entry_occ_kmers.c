@@ -7,8 +7,8 @@ typedef struct dict_entry_occ_kmers{
 
 	int* kmer; //chiave
 	rs_tuple** head; //lista di puntatori a coppie (READ,START)
-	int size; //numeri di entry stimate
-	int used; //numero di entry effettivamente inserite
+	unsigned int size; //numeri di entry stimate
+	unsigned int used; //numero di entry effettivamente inserite
 
 } dict_entry_kmers;
 
@@ -40,7 +40,7 @@ out: 1 se l'inseimento della coppia (READ,START) è andata a buon fine
 
 int add_in_dict_entry_kmers(dict_entry_kmers* entry,int r, int s){
 	if(entry->used == entry->size){ //Controllo se c'è bisogno di allocare altra memoria
-		entry->size*=2;
+		entry->size+=20;
 		entry->head =  realloc(entry->head, entry->size * sizeof(rs_tuple*));
 	}
 	entry->head[entry->used++] = create_rs_tuple(r, s); //La nuova entry sarà bessa in testa alla lista delle entry,

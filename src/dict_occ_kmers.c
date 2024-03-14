@@ -6,8 +6,8 @@ typedef struct dict_occ_kmers
 {
 
 	dict_entry_kmers **head; // puntatore alla lista di entry
-	int size;				 // numero di entry stimate
-	int used;				 // numero di entry effettivamente usate
+	unsigned int size;				 // numero di entry stimate
+	unsigned int used;				 // numero di entry effettivamente usate
 
 } dict_kmers;
 
@@ -45,7 +45,7 @@ dict_entry_kmers *add_dict_entry(dict_kmers *dict, int *kmer)
 {
 	if (dict->size == dict->used)
 	{ // si controlla se c'è bisogno di allocare ulteriore memoria
-		dict->size *= 2;
+		dict->size *=2;
 		dict->head = realloc(dict->head, dict->size * sizeof(dict_kmers *));
 	}
 	dict->head[dict->used++] = create_dict_entry(kmer); // viene inserito allìinterno del dizionario l'entry che ha per chiave il kmer

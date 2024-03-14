@@ -1,0 +1,1 @@
+int getEntryKey(int* kmer,unsigned int hdictsize,int k);

@@ -4,8 +4,8 @@
 typedef struct overlap_dict{
 
         overlap_dict_entry** head; //primo elemento
-        int size;
-        int used;
+        unsigned int size;
+        unsigned int used;
 
 }overlap_dict;
 

@@ -3,8 +3,8 @@
 typedef struct min_sharing_dict{
 
 	min_sharing_dict_entry** head;
-	int size;
-	int used;
+	unsigned int size;
+	unsigned int used;
 
 }min_sharing_dict;
 
@@ -32,7 +32,7 @@ aggiunge all'interno del dizionario dict una entry che ha come chiave reads
 */
 min_sharing_dict_entry*  add_msdict_entry(min_sharing_dict* dict, int* reads){
         if (dict->size == dict->used){
-                dict->size*=2;
+                dict->size+=20;
                 dict->head = realloc(dict->head, dict->size * sizeof(min_sharing_dict_entry**));
         }
         dict->head[dict->used++] = createMSDictEntry(reads);

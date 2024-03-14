@@ -7,8 +7,8 @@ typedef struct dict_entry_occ_kmers{
 
         int* kmer; //chiave
         rs_tuple** head; //primo elemento
-        int size;
-	int used;
+        unsigned int size;
+	unsigned int used;
 
 } dict_entry_kmers;
 

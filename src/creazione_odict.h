@@ -1,0 +1,1 @@
+hash_odict *crea_odict(fingerprint *f_list,hash_mdict *hmdict,hash_odict *hodict,pthread_mutex_t *_mutex,parameters *_p);

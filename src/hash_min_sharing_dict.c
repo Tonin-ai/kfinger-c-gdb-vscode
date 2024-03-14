@@ -8,7 +8,7 @@
 typedef struct hash_msdict{
 
         min_sharing_dict** dicts_list;//lista di puntatori a dizionari min_sharing_dict
-        int size; //numero di entry della lista
+        unsigned int size; //numero di entry della lista
 
 } hash_msdict;
 

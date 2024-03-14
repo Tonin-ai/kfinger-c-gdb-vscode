@@ -8,11 +8,11 @@
 typedef struct hash_mdict{
 
         matches_dict** dicts_list; //lista di puntatori a dizionari
-        int size; //numero di dizionari
+        unsigned int size; //numero di dizionari
 
 } hash_mdict;
 
-void initHashMDict(hash_mdict* mdict,int size);
+void initHashMDict(hash_mdict* mdict,unsigned int size);
 int add_in_hash_mdict(matches_dict** dict,int* reads,int first, int second);
 void viewHashMDict(hash_mdict* mdict);
 
@@ -22,10 +22,10 @@ out: void
 viene inizializzato il dizionario con un numero di entry passate come parametro
 */
 
-void initHashMDict(hash_mdict* mdict,int size){
+void initHashMDict(hash_mdict* mdict,unsigned int size){
         mdict->size=size;
         mdict->dicts_list=(matches_dict**)malloc(mdict->size * sizeof(matches_dict*));
-        for(int i=0;i<mdict->size;i++) mdict->dicts_list[i]=NULL;
+        for(unsigned int i=0;i<mdict->size;i++) mdict->dicts_list[i]=NULL;
 }
 
 /*

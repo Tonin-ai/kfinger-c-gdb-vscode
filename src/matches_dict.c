@@ -1,11 +1,14 @@
 #include <malloc.h>
 #include <string.h>
 #include "matches_dict_entry.h"
+
+
+
 typedef struct matches_dict{
 
 	matches_dict_entry** head; //primo elemento
-        int size;
-        int used;
+        unsigned int size;
+        unsigned int used;
 
 }matches_dict;
 
@@ -21,7 +24,7 @@ out: void
 Inizializza il dizionario dict passato come argomento e alloca spazio per poter inserire le entry
 */
 void initMDict(matches_dict* dict){
-        dict->size=1;
+        dict->size=10;
         dict->head=(matches_dict_entry**)malloc(dict->size*sizeof(matches_dict_entry*));
         dict->used=0;
 }

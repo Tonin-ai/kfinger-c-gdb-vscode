@@ -1,0 +1,1 @@
+hash_dict *crea_dizionario(fingerprint *f_list,unsigned int f_list_size,hash_dict *hdict, hash_dict *hdicttemp,pthread_mutex_t *_mutex,parameters* _p);

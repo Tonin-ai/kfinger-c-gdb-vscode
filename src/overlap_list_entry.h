@@ -5,4 +5,4 @@ typedef struct olistentry{
 
 }olistentry;
 
-olistentry* createolistoentry(int x1,int x2,int x3,int x4,int x5,int x6,int x7,int x8,int x9);
+olistentry* createolistoentry(int id1,int flag1,int id2,int flag2,int lenght1,int lenght2,int start1,int end1,int start2,int end2,int strand);

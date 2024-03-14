@@ -1,0 +1,1 @@
+unsigned int crea_fingerprint_list(fingerprint *f_list);

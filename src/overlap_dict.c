@@ -4,8 +4,8 @@
 typedef struct overlap_dict{
 
         overlap_dict_entry** head; //primo elemento
-        int size;
-        int used;
+        unsigned int size;
+        unsigned int used;
 
 }overlap_dict;
 
@@ -34,7 +34,7 @@ aggiunge all'interno del dizionario duct una entry con chiave reads passata come
 
 overlap_dict_entry* add_odict_entry(overlap_dict* dict, int* reads){
         if (dict->size == dict->used){//Controlla se si deve allocare altra memoria
-                dict->size*=2;
+                dict->size+=20;
                 dict->head = realloc(dict->head, dict->size * sizeof(overlap_dict_entry*));
         }
         dict->head[dict->used++]= createODictEntry(reads);
